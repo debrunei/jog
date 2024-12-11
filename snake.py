@@ -23,7 +23,7 @@ score = 0
 
 # Set colors
 GREEN = 0, 255, 0
-RED = 255, 0 , 0
+RED = 255, 0, 0
 WHITE = 255, 255, 255
 
 DARKGREEN = (10, 50, 10)
@@ -46,24 +46,20 @@ def create_text_and_rect(text, color, background_color, **locations):
     return text, rect
 
 
-
 title_text, title_rect = create_text_and_rect("~~Snake~~", GREEN, DARKRED,
-                                             center=(WINDOW_WIDTH // 2, WINDOW_HEIGHT // 2))
+                                              center=(WINDOW_WIDTH // 2, WINDOW_HEIGHT // 2))
 
 score_text, score_rect = create_text_and_rect("Score", GREEN, DARKRED,
                                               topleft=(10, 10))
 
-game_over_text, game_over_rect = create_text_and_rect("GAMEOVER",RED, DARKGREEN,
+game_over_text, game_over_rect = create_text_and_rect("GAMEOVER", RED, DARKGREEN,
                                                       center=(WINDOW_WIDTH // 2, WINDOW_HEIGHT // 2))
 
 continue_text, continue_rect = create_text_and_rect("Press any key to play again", RED, DARKGREEN,
                                                     center=(WINDOW_WIDTH // 2, WINDOW_HEIGHT // 2 + 64))
 
-
-
 # Set sounds and music
 pick_up_sound = pygame.mixer.Sound("pick_up_sound.wav")
-
 
 # Set images (in this case, use simple rects...so just create their coordinates)
 # For a rectangle you need (top-left x, top-left y, width, height)
@@ -74,7 +70,6 @@ head_coord = (head_x, head_y, SNAKE_SIZE, SNAKE_SIZE)
 head_rect = pygame.draw.rect(display_surface, GREEN, head_coord)
 
 body_coords = []
-
 
 # The main game loop
 running = True
@@ -97,7 +92,6 @@ def move_snake(event):
         if key == pygame.K_DOWN:
             snake_dx = 0
             snake_dy = SNAKE_SIZE
-
 
 
 def check_quit(event):
@@ -125,6 +119,7 @@ def handle_snake():
     snake_dy += head_y
     head_coord = (head_x, head_y, SNAKE_SIZE, SNAKE_SIZE)
 
+
 def reset_game_after_game_over(event):
     global is_paused, score, head_x, head_y, head_coord, body_coords, snake_dx, snake_dy
     if event.type == pygame.KEYDOWN:
@@ -136,6 +131,7 @@ def reset_game_after_game_over(event):
         snake_dx = 0
         snake_dy = 0
         is_paused = False
+
 
 def check_end_game_after_game_over(event):
     global is_paused
@@ -152,7 +148,7 @@ def check_game_over():
     global running
     global is_paused
     if (head_rect.left <= 0 or head_rect.right >= WINDOW_WIDTH or
-        head_rect.top == -1 or head_rect.bottom >= WINDOW_HEIGHT or head_coord in body_coords):
+            head_rect.top == -1 or head_rect.bottom >= WINDOW_HEIGHT or head_coord in body_coords):
         display_surface.blit(game_over_text, game_over_rect)
         display_surface.blit(continue_text, continue_rect)
         pygame.display.update()
@@ -162,8 +158,9 @@ def check_game_over():
                 reset_game_after_game_over(event)
                 check_end_game_after_game_over(event)
 
+
 def check_collisions():
-    global score, apple_x, apple_y, apple_coord, body_coords
+    global score, apple_coord, body_coords
     if head_rect.colliderect(apple_rect):
         score += 1
         pick_up_sound.play()
@@ -172,12 +169,15 @@ def check_collisions():
         apple_coord = (apple_x, apple_y, SNAKE_SIZE, SNAKE_SIZE)
         body_coords.append(head_coord)
 
+
 def blit_hud():
     display_surface.blit(title_text, title_rect)
     display_surface.blit(score_text, score_rect)
 
 
 def blit_assets():
+    global head_rect
+    global apple_rect
     for body in body_coords:
         pygame.draw.rect(display_surface, DARKGREEN, body)
     head_rect = pygame.draw.rect(display_surface, GREEN, head_coord)
