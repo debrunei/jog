@@ -115,8 +115,8 @@ def handle_snake():
     global snake_dx, snake_dy
     body_coords.insert(0, head_coord),
     body_coords.pop()
-    snake_dx += head_x
-    snake_dy += head_y
+    head_x += snake_dx
+    head_y += snake_dy
     head_coord = (head_x, head_y, SNAKE_SIZE, SNAKE_SIZE)
 
 
