@@ -50,7 +50,7 @@ title_text, title_rect = create_text_and_rect("~~Snake~~", GREEN, DARKRED,
                                               center=(WINDOW_WIDTH // 2, WINDOW_HEIGHT // 2))
 
 score_text, score_rect = create_text_and_rect("Score", GREEN, DARKRED,
-                                              topleft=(10, 10))
+                                              topleft=(37, 20))
 
 game_over_text, game_over_rect = create_text_and_rect("GAMEOVER", RED, DARKGREEN,
                                                       center=(WINDOW_WIDTH // 2, WINDOW_HEIGHT // 2))

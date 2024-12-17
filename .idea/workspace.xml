@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60f316e6-86a1-4337-9013-3f0f550bd524" name="Changes" comment="4 commit">
+    <list default="true" id="60f316e6-86a1-4337-9013-3f0f550bd524" name="Changes" comment="5 commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snake.py" beforeDir="false" afterPath="$PROJECT_DIR$/snake.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +80,8 @@
       <updated>1733753200247</updated>
       <workItem from="1733753209873" duration="4239000" />
       <workItem from="1733925162096" duration="1949000" />
-      <workItem from="1734097932630" duration="864000" />
+      <workItem from="1734097932630" duration="1154000" />
+      <workItem from="1734443614480" duration="1066000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -115,7 +115,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733927042791</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="5 commit">
+      <option name="closed" value="true" />
+      <created>1734099082700</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1734099082700</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,9 +134,10 @@
     <MESSAGE value="2nd commit" />
     <MESSAGE value="3 commit" />
     <MESSAGE value="4 commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="4 commit" />
+    <MESSAGE value="5 commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="5 commit" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/jog$snake.coverage" NAME="snake Coverage Results" MODIFIED="1734098800153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/jog$snake.coverage" NAME="snake Coverage Results" MODIFIED="1734444827437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
